@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+/*can import hammerjs for certain components - mat-slide-toggle, mat-slider etc.*/
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-portfolio';
+  title = 'My Portfolio';
 }
