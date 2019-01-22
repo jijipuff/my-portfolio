@@ -7,21 +7,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule, MatCardModule, MatToolbarModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { PortfolioComponent } from './portfolio/portfolio.component'
 import { AppComponent } from './app.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 
-//router imports for navigation -- you don't get redirected to new URLS (if you want that you need href tag)
+//router service for navigation -- displays component
+import { RouterModule, Routes } from '@angular/router';
 
-import { RouterModule, Routes } from '@angular/router'
-
+//configuring routes
 const appRoutes: Routes = [
-  {path: 'aboutme', component: AboutmeComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'portfolio', component: PortfolioComponent},
-  {path: 'resume', component: ResumeComponent},
+  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'aboutme', component: AboutmeComponent },
+  { path: 'resume', component: ResumeComponent },
+  { path: 'contact', component: ContactComponent },
 ]
 
 @NgModule({
@@ -40,7 +40,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true} //debugging purposes
+      { enableTracing: true } //debugging purposes
     )
   ],
   providers: [],
