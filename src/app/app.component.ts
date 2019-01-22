@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//can import hammerjs for certain components - mat-slide-toggle, mat-slider etc.
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title: string;
+  page: Object;
+
   constructor() { }
 
   ngOnInit() {
-    // We call a service that gets us the data 
     this.title = "My Portfolio"
   }
 
